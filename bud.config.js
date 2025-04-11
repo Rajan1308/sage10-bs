@@ -19,6 +19,8 @@ export default async (app) => {
     .watch(['resources/**/*'])
     .assets(['images']);
 
+    app.use(await import('@roots/bud-imagemin'));
+
   /**
    * Set public path
    *
@@ -35,7 +37,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://example.test')
+    .setProxyUrl('https://westpack.ddev.site/')
     .watch(['resources/views', 'app']);
 
   /**

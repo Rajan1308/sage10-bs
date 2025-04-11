@@ -157,3 +157,7 @@ add_filter('wp_generate_attachment_metadata', function ($metadata, $attachment_i
 
     return $metadata;
 }, 10, 2);
+
+
+# require_once __DIR__ . '/performance.php';
+require_once __DIR__ . '/admin-cleanup.php';
